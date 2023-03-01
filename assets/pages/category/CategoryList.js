@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import Layout from "../../components/Layout"
+import Layout from "../../theme/Layout"
 import Swal from 'sweetalert2'
 import axios from 'axios';
 
@@ -63,8 +63,8 @@ function CategoryList() {
                 <div className="card">
                     <div className="card-header">
                         <Link
-                            className="btn btn-outline-primary"
-                            to="/create">Cadastrar Categoria
+                            className="btn btn-primary"
+                            to="/category/create">Cadastrar Categoria
                         </Link>
                     </div>
                     <div className="card-body">
@@ -84,18 +84,18 @@ function CategoryList() {
                                             <td>{category.amount}</td>
                                             <td>
                                                 <Link
-                                                    to={`/show/${category.id}`}
-                                                    className="btn btn-outline-info mx-1">
+                                                    to={`/category/show/${category.id}`}
+                                                    className="btn btn-info mx-1">
                                                     Visualizar
                                                 </Link>
                                                 <Link
-                                                    className="btn btn-outline-success mx-1"
-                                                    to={`/edit/${category.id}`}>
+                                                    className="btn btn-success mx-1"
+                                                    to={`/category/edit/${category.id}`}>
                                                     Editar
                                                 </Link>
                                                 <button
                                                     onClick={() => handleDelete(category.id)}
-                                                    className="btn btn-outline-danger mx-1">
+                                                    className="btn btn-danger mx-1">
                                                     Deletar
                                                 </button>
                                             </td>

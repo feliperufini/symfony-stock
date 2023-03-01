@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from "react-router-dom";
-import Layout from "../../components/Layout";
+import Layout from "../../theme/Layout";
 import axios from 'axios';
 
 function ProductShow() {
@@ -20,12 +20,12 @@ function ProductShow() {
     return (
         <Layout>
             <div className="container">
-                <h2 className="text-center mt-5 mb-3">Visualizar Produto</h2>
+                <h2 className="text-center mt-5 mb-3">Produto - {product.name}</h2>
                 <div className="card">
                     <div className="card-header">
                         <Link
-                            className="btn btn-outline-info float-right"
-                            to="/"> Visualizar Todos
+                            className="btn btn-info float-right"
+                            to="/product"> Visualizar Todos
                         </Link>
                     </div>
                     <div className="card-body">

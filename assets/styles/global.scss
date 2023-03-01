@@ -1,0 +1,41 @@
+// customize some Bootstrap variables
+$primary: #3a99ff;
+$secondary: #757575;
+$info: #3fcbcf;
+$success: #37e07e;
+$warning: #ffc107;
+$danger: #ff6565;
+
+$table-cell-padding-y:        .5rem;
+$table-cell-padding-x:        1rem;
+$table-cell-padding-y-sm:     .25rem;
+$table-cell-padding-x-sm:     .5rem;
+
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
+
+// open editor CSS
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e9e9e9;
+    -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+text-area,
+button {
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 1rem;
+}
+
+.btn {
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-color: #fff;
+    color: #fff;
+}

@@ -4,9 +4,9 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Request;
 use App\Entity\Product;
 
 /**
@@ -27,7 +27,10 @@ class ProductController extends AbstractController
     {
         $data = $this->EM->createQuery('SELECT product.id, product.name, product.description, product.price, product.amount FROM App\Entity\Product product')->getResult();
 
-        return $this->json($data, 200);
+        $response = new JsonResponse($data);
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        $response->headers->set('Access-Control-Allow-Headers', 'Authorization');
+        return $response;
     }
 
     /**

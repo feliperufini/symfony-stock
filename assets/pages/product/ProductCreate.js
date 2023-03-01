@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import Layout from "../../components/Layout"
+import Layout from "../../theme/Layout"
 import Swal from 'sweetalert2'
 import axios from 'axios';
 
@@ -55,8 +55,8 @@ function ProductCreate() {
                 <div className="card">
                     <div className="card-header">
                         <Link
-                            className="btn btn-outline-info float-right"
-                            to="/">Listar Produtos
+                            className="btn btn-info float-right"
+                            to="/product">Listar Produtos
                         </Link>
                     </div>
                     <div className="card-body">
@@ -111,7 +111,7 @@ function ProductCreate() {
                                 disabled={isSaving}
                                 onClick={handleSave}
                                 type="button"
-                                className="btn btn-outline-primary mt-3">
+                                className="btn btn-primary mt-3">
                                 Salvar
                             </button>
                         </form>
